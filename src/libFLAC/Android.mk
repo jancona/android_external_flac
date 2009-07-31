@@ -16,8 +16,6 @@ LOCAL_SRC_FILES:= \
 	metadata_iterators.c \
 	metadata_object.c \
 	stream_decoder.c \
-	stream_encoder.c \
-	stream_encoder_framing.c \
 	window.c
 
 LOCAL_C_INCLUDES += \
@@ -26,7 +24,7 @@ LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/../../include
 
 LOCAL_CFLAGS += -DHAVE_CONFIG_H
-#LOCAL_CFLAGS  += -D_REENTRANT -DPIC -DU_COMMON_IMPLEMENTATION -fPIC 
+LOCAL_CFLAGS += -D_REENTRANT -DPIC -DU_COMMON_IMPLEMENTATION -fPIC
 LOCAL_CFLAGS += -O3 -funroll-loops -finline-functions
 
 LOCAL_LDLIBS += -lm
